@@ -1,0 +1,7 @@
+trl==0.16.1
+datasets==3.5.0
+transformers==4.51.0
+tokenizers==0.21.1
+torch==2.6.0
+triton==3.2.0 
+peft==0.15.1 
