@@ -49,7 +49,9 @@ pip install -r requirements.txt
 ```
 
 #deepseek-r1解读
-[deepseek系列相关模型架构](https://github.com/liuliAI/Deepseek-R1/blob/main/image/ds.png)
+
+![deepseek系列相关模型架构](https://github.com/liuliAI/Deepseek-R1/blob/main/image/ds.png)
+
 总体流程：在进行强化学习前引入了sft冷启动；随后进行推理强化学习训练；在RL过程接近收敛时，通过拒绝采样（rejection sampling）方法从RL检查点生成新的SFT数据，并结合写作、事实QA和自我认知等领域的监督数据重新训练模型；最后，使用新数据完成微调后的检查点进行额外的RL训练。包含两个RL阶段用于优化推理模式和人类偏好对齐，以及两个SFT阶段用于构建模型的推理和非推理基础能力。阶段1和2的训练过程，只是为了给真正的R1模型训练收集数据，真正微调的仍是DeepSeek-V3-Base，而非训练阶段1和2的中间模型。
 
 ## 常规的大模型训练方案
