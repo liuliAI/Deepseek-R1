@@ -1,3 +1,24 @@
+
+
+### 进行环境配置
+```bash
+conda create -n ds python=3.10
+conda activate ds
+pip install -r requirements.txt
+```
+
+### 下载Qwen2.5-0.5B-Instruct模型
+
+确保目录结构如下：
+
+
+### 启动训练
+使用命令`python deepseek_r1_train.py`
+
+
+
+#deepseek-r1解读
+
 # 常规的大模型训练方案
 pretrain -> sft -> rl
 
